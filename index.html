@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>ሰላም እድል እባክሽ ይለፍ ቃል አስገቢ</h2>
+        <input type="password" id="password" placeholder="ፓስዎርድ">
+        <button onclick="checkPassword()">አሳልፍ</button>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (password === 'naaz') {
+                window.location.href = 'home.html';
+            } else {
+                errorMessage.textContent = 'ይቅርታ ልክ አይደለም!!! እንደገና ሞክሪ🤞🤞';
+            }
+        }
+    </script>
+
+</body>
+</html>
